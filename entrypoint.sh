@@ -23,9 +23,9 @@ git reset --hard
 mv pdf_out/* ..
 rm -r pdf_out/
 
+git add .
 git status
 git config user.name "$GITHUB_ACTOR"
 git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-git add .
 git commit -m 'marp-action publish'
 git push --force --set-upstream origin $2
